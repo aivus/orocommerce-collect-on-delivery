@@ -1,0 +1,21 @@
+{
+    "name": "aivus/collect-on-delivery",
+    "type": "symfony-bundle",
+    "description": "OroCommerce CollectOnDelivery Bundle",
+    "keywords": ["OroCommerce", "CollectOnDelivery"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oro, Inc",
+            "homepage": "http://www.orocrm.com"
+        }
+    ],
+    "require": {
+        "oro/commerce": "1.4.x-dev"
+    },
+    "autoload": {
+        "psr-4": { "ACME\\Bundle\\CollectOnDeliveryBundle\\": "" }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
