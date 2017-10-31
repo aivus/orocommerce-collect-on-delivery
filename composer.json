@@ -1,5 +1,5 @@
 {
-    "name": "aivus/collect-on-delivery",
+    "name": "aivus/orocommerce-collect-on-delivery",
     "type": "symfony-bundle",
     "description": "OroCommerce CollectOnDelivery Bundle",
     "keywords": ["OroCommerce", "CollectOnDelivery"],
