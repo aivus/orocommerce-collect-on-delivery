@@ -8,11 +8,6 @@ services:
         arguments:
             - '%acme_collect_on_delivery.method.identifier_prefix.collect_on_delivery%'
 
-    acme_collect_on_delivery.form.type.settings:
-        class: ACME\Bundle\CollectOnDeliveryBundle\Form\Type\CollectOnDeliverySettingsType
-        tags:
-            - { name: form.type }
-
     acme_collect_on_delivery.integration.channel:
         class: ACME\Bundle\CollectOnDeliveryBundle\Integration\CollectOnDeliveryChannelType
         public: true
@@ -39,11 +34,6 @@ services:
             - '@logger'
             - '@acme_collect_on_delivery.factory.collect_on_delivery_config'
 
-
-    acme_collect_on_delivery.factory.method.collect_on_delivery:
-        class: ACME\Bundle\CollectOnDeliveryBundle\PaymentMethod\Factory\CollectOnDeliveryPaymentMethodFactory
-        public: false
-
     acme_collect_on_delivery.factory.method_view.collect_on_delivery:
         class: ACME\Bundle\CollectOnDeliveryBundle\PaymentMethod\View\Factory\CollectOnDeliveryViewFactory
         public: false
@@ -56,6 +46,10 @@ services:
             - '@acme_collect_on_delivery.factory.method_view.collect_on_delivery'
         tags:
             - { name: oro_payment.payment_method_view_provider }
+
+    acme_collect_on_delivery.factory.method.collect_on_delivery:
+        class: ACME\Bundle\CollectOnDeliveryBundle\PaymentMethod\Factory\CollectOnDeliveryPaymentMethodFactory
+        public: false
 
     acme_collect_on_delivery.payment_method_provider.collect_on_delivery:
         class: ACME\Bundle\CollectOnDeliveryBundle\PaymentMethod\Provider\CollectOnDeliveryMethodProvider

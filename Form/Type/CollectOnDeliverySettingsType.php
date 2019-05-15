@@ -21,20 +21,20 @@ class CollectOnDeliverySettingsType extends AbstractType
         $builder
             ->add(
                 'labels',
-                LocalizedFallbackValueCollectionType::NAME,
+                LocalizedFallbackValueCollectionType::class,
                 [
                     'label' => 'acme.collect_on_delivery.settings.labels.label',
                     'required' => true,
-                    'options' => ['constraints' => [new NotBlank()]],
+                    'entry_options' => ['constraints' => [new NotBlank()]],
                 ]
             )
             ->add(
                 'shortLabels',
-                LocalizedFallbackValueCollectionType::NAME,
+                LocalizedFallbackValueCollectionType::class,
                 [
                     'label' => 'acme.collect_on_delivery.settings.short_labels.label',
                     'required' => true,
-                    'options' => ['constraints' => [new NotBlank()]],
+                    'entry_options' => ['constraints' => [new NotBlank()]],
                 ]
             );
     }
