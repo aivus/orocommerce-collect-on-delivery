@@ -7,6 +7,9 @@ use ACME\Bundle\CollectOnDeliveryBundle\PaymentMethod\Config\Provider\CollectOnD
 use ACME\Bundle\CollectOnDeliveryBundle\PaymentMethod\View\Factory\CollectOnDeliveryViewFactoryInterface;
 use Oro\Bundle\PaymentBundle\Method\View\AbstractPaymentMethodViewProvider;
 
+/**
+ * Provider for retrieving payment method view instances
+ */
 class CollectOnDeliveryViewProvider extends AbstractPaymentMethodViewProvider
 {
     /** @var CollectOnDeliveryViewFactoryInterface */

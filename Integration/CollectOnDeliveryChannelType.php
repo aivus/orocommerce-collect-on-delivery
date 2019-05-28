@@ -5,6 +5,9 @@ namespace ACME\Bundle\CollectOnDeliveryBundle\Integration;
 use Oro\Bundle\IntegrationBundle\Provider\ChannelInterface;
 use Oro\Bundle\IntegrationBundle\Provider\IconAwareIntegrationInterface;
 
+/**
+ * Integration channel type for Collect on delivery payment integration
+ */
 class CollectOnDeliveryChannelType implements ChannelInterface, IconAwareIntegrationInterface
 {
     const TYPE = 'collect_on_delivery';

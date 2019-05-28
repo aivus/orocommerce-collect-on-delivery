@@ -9,6 +9,9 @@ use ACME\Bundle\CollectOnDeliveryBundle\PaymentMethod\Config\Factory\CollectOnDe
 use Doctrine\Common\Persistence\ManagerRegistry;
 use Psr\Log\LoggerInterface;
 
+/**
+ * Allows to get configs of Collect on delivery payment method
+ */
 class CollectOnDeliveryConfigProvider implements CollectOnDeliveryConfigProviderInterface
 {
     /**

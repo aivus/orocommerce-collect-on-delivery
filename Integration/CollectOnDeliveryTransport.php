@@ -7,6 +7,9 @@ use ACME\Bundle\CollectOnDeliveryBundle\Form\Type\CollectOnDeliverySettingsType;
 use Oro\Bundle\IntegrationBundle\Entity\Transport;
 use Oro\Bundle\IntegrationBundle\Provider\TransportInterface;
 
+/**
+ * Transport for Collect on delivery payment integration
+ */
 class CollectOnDeliveryTransport implements TransportInterface
 {
     /**

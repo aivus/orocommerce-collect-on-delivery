@@ -5,6 +5,9 @@ namespace ACME\Bundle\CollectOnDeliveryBundle\Entity\Repository;
 use ACME\Bundle\CollectOnDeliveryBundle\Entity\CollectOnDeliverySettings;
 use Doctrine\ORM\EntityRepository;
 
+/**
+ * Repository for CollectOnDeliverySettings entity
+ */
 class CollectOnDeliverySettingsRepository extends EntityRepository
 {
     /**

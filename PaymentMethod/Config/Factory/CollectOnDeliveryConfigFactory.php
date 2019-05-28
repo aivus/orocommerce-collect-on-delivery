@@ -8,6 +8,9 @@ use Doctrine\Common\Collections\Collection;
 use Oro\Bundle\IntegrationBundle\Generator\IntegrationIdentifierGeneratorInterface;
 use Oro\Bundle\LocaleBundle\Helper\LocalizationHelper;
 
+/**
+ * Creates instances of configurations for Collect on delivery payment method
+ */
 class CollectOnDeliveryConfigFactory implements CollectOnDeliveryConfigFactoryInterface
 {
     /**
@@ -40,10 +43,10 @@ class CollectOnDeliveryConfigFactory implements CollectOnDeliveryConfigFactoryIn
         $params = [];
         $channel = $settings->getChannel();
 
-        $params[CollectOnDeliveryConfig::LABEL_KEY] = $this->getLocalizedValue($settings->getLabels());
-        $params[CollectOnDeliveryConfig::SHORT_LABEL_KEY] = $this->getLocalizedValue($settings->getShortLabels());
-        $params[CollectOnDeliveryConfig::ADMIN_LABEL_KEY] = $channel->getName();
-        $params[CollectOnDeliveryConfig::PAYMENT_METHOD_IDENTIFIER_KEY] =
+        $params[CollectOnDeliveryConfig::FIELD_LABEL] = $this->getLocalizedValue($settings->getLabels());
+        $params[CollectOnDeliveryConfig::FIELD_SHORT_LABEL] = $this->getLocalizedValue($settings->getShortLabels());
+        $params[CollectOnDeliveryConfig::FIELD_ADMIN_LABEL] = $channel->getName();
+        $params[CollectOnDeliveryConfig::FIELD_PAYMENT_METHOD_IDENTIFIER] =
             $this->identifierGenerator->generateIdentifier($channel);
 
         return new CollectOnDeliveryConfig($params);

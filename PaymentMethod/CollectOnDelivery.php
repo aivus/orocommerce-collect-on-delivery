@@ -7,12 +7,16 @@ use Oro\Bundle\PaymentBundle\Context\PaymentContextInterface;
 use Oro\Bundle\PaymentBundle\Entity\PaymentTransaction;
 use Oro\Bundle\PaymentBundle\Method\PaymentMethodInterface;
 
+/**
+ * Payment method class that describes main business logic of Collect on delivery payment method
+ * It creates invoice payment transaction
+ */
 class CollectOnDelivery implements PaymentMethodInterface
 {
     /**
      * @var CollectOnDeliveryConfigInterface
      */
-    protected $config;
+    private $config;
 
     /**
      * @param CollectOnDeliveryConfigInterface $config

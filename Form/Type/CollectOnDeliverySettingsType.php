@@ -9,6 +9,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
+/**
+ * Form type for Collect on delivery integration settings
+ */
 class CollectOnDeliverySettingsType extends AbstractType
 {
     const BLOCK_PREFIX = 'acme_collect_on_delivery_setting_type';
@@ -58,5 +61,4 @@ class CollectOnDeliverySettingsType extends AbstractType
     {
         return self::BLOCK_PREFIX;
     }
-
 }

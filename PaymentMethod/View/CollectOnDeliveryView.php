@@ -6,6 +6,9 @@ use ACME\Bundle\CollectOnDeliveryBundle\PaymentMethod\Config\CollectOnDeliveryCo
 use Oro\Bundle\PaymentBundle\Context\PaymentContextInterface;
 use Oro\Bundle\PaymentBundle\Method\View\PaymentMethodViewInterface;
 
+/**
+ * View for Collect on delivery payment method
+ */
 class CollectOnDeliveryView implements PaymentMethodViewInterface
 {
     /**
